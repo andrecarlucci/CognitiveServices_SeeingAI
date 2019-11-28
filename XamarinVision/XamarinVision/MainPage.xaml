@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="XamarinVision.MainPage">
+
+    <Grid BackgroundColor="WhiteSmoke">
+
+        <Image x:Name="CurrentImage" 
+               Source="{Binding CurrentImageSource}"
+               HorizontalOptions="CenterAndExpand"
+               />
+        <Grid VerticalOptions="Start">
+            <Label Text="{Binding Description}"
+               d:Text="Description"
+               TextColor="White"
+               BackgroundColor="Accent"
+               LineBreakMode="WordWrap"
+               HorizontalTextAlignment="Center"
+               Margin="12"
+               Opacity="0.8"
+                />
+        </Grid>
+        <Button Text="See for Me!" 
+                Command="{Binding TakeAPictureCommand}"
+                VerticalOptions="End"
+                HeightRequest="80"
+                />
+    </Grid>
+
+</ContentPage>
